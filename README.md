@@ -31,3 +31,5 @@ npm install
 ```
 npm run start
 ```
+
+3. localhost:3000 접속
