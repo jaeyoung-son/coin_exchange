@@ -1,0 +1,49 @@
+.price_calc_container {
+  padding: 20px;
+  margin-top: 50px;
+  background-color: #d3d3d3;
+}
+
+.price_calc_title {
+  font-weight: bold;
+}
+
+.price_calc_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.price_currency_container {
+  border: 1px solid #fff0f0;
+  display: flex;
+  width: 300px;
+}
+
+.price_calc_arrowbox {
+  padding: 0 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.price_currency_name {
+  padding: 15px 10px;
+  flex: 1;
+  background-color: #ececec;
+  border-right: 1px solid #d8d8d8;
+}
+
+.price_currency_input {
+  text-align: right;
+  padding: 15px 10px;
+  flex: 2.5;
+  border: none;
+  outline: none;
+}
+
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

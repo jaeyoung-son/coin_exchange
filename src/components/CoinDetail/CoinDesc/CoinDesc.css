@@ -1,0 +1,23 @@
+.CoinDesc_container {
+  margin-top: 30px;
+}
+
+.CoinDesc_header {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.CoinDesc_button {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.CoinDesc_descbox {
+  padding: 20px 0;
+}
+
+.CoinDesc_pre {
+  white-space: pre-wrap;
+}

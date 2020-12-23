@@ -1,0 +1,20 @@
+.detail_header_container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail_header_left {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.detail_header_logo {
+  margin: 0 10px;
+}
+
+.detail_header_name {
+  margin-right: 10px;
+}

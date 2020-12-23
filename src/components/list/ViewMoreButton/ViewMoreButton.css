@@ -1,0 +1,6 @@
+.view_more_button_container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}

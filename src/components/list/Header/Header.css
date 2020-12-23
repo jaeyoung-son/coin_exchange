@@ -1,0 +1,24 @@
+.header_container {
+  border: 1px solid black;
+  display: flex;
+}
+
+.header_button {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  width: 50%;
+  text-align: center;
+  background-color: #f4f4f4;
+  color: #6b6b6b;
+  font-weight: bold;
+}
+
+.header_button_current {
+  background-color: white;
+  color: black;
+}
+
+.header_blank {
+  height: 70px;
+}

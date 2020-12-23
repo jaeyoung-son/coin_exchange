@@ -1,0 +1,36 @@
+.table_header_container {
+  background-color: #fafafa;
+  color: gray;
+  display: flex;
+  padding: 15px;
+  text-align: right;
+}
+
+.table_star {
+  flex: 0.5;
+  text-align: left;
+}
+
+.table_assets {
+  flex: 4;
+  text-align: left;
+}
+
+.table_price {
+  flex: 2;
+}
+
+.table_date {
+  flex: 1.5;
+}
+
+.table_volume {
+  flex: 3;
+}
+
+.table_no_data {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  font-size: 18px;
+}

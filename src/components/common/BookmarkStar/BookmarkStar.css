@@ -1,0 +1,22 @@
+.bookmark_star {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.bookmark_star_selected {
+  background-color: yellow;
+}
+
+.bookmark_toast_container {
+  background-color: #bdceee;
+  position: absolute;
+  top: 25px;
+  left: 35px;
+  width: 150px;
+  font-size: 14px;
+  padding: 10px;
+}

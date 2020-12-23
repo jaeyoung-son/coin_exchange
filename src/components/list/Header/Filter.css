@@ -1,0 +1,10 @@
+.filter_container {
+  padding: 20px 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.filter_box {
+  margin-right: 20px;
+  padding: 5px;
+}

@@ -1,0 +1,27 @@
+.row_container {
+  display: flex;
+  padding: 15px;
+  text-align: right;
+  border-bottom: 3px solid#F8F8F8;
+}
+
+.table_name {
+  display: flex;
+}
+
+.table_coin_name {
+  flex: 2;
+  cursor: pointer;
+}
+
+.table_coin_symbol {
+  flex: 1;
+}
+
+.increase {
+  color: red;
+}
+
+.decrease {
+  color: blue;
+}
