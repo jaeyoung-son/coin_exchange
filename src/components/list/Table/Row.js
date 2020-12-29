@@ -22,7 +22,7 @@ function Row({ data, setCoinList, coinList, filter, trigger, setTrigger }) {
 
   return (
     <li className="row_container">
-      <div className="table_star">
+      <button className="table_star">
         <BookmarkStar
           trigger={trigger}
           setTrigger={setTrigger}
@@ -30,28 +30,28 @@ function Row({ data, setCoinList, coinList, filter, trigger, setTrigger }) {
           id={id}
           setCoinList={setCoinList}
         />
-      </div>
-      <div className="table_assets table_name">
+      </button>
+      <p className="table_assets table_name">
         <Link to={`/coin/${id}`} className="table_coin_name">
           <span>{name}</span>
         </Link>
         <span className="table_coin_symbol">{symbol}</span>
-      </div>
-      <div className="table_price">
+      </p>
+      <p className="table_price">
         {`${currencyObj[filter.currency]}${toLocaleFunc(current_price)}`}
-      </div>
-      <div className={dateClasses(price_change_percentage_1h_in_currency)}>
+      </p>
+      <p className={dateClasses(price_change_percentage_1h_in_currency)}>
         {toLocaleFunc(price_change_percentage_1h_in_currency, 1)}%
-      </div>
-      <div className={dateClasses(price_change_percentage_24h_in_currency)}>
+      </p>
+      <p className={dateClasses(price_change_percentage_24h_in_currency)}>
         {toLocaleFunc(price_change_percentage_24h_in_currency, 1)}%
-      </div>
-      <div className={dateClasses(price_change_percentage_7d_in_currency)}>
+      </p>
+      <p className={dateClasses(price_change_percentage_7d_in_currency)}>
         {toLocaleFunc(price_change_percentage_7d_in_currency, 1)}%
-      </div>
-      <div className="table_volume">
+      </p>
+      <p className="table_volume">
         {`${currencyObj[filter.currency]}${toLocaleFunc(total_volume)}`}
-      </div>
+      </p>
     </li>
   );
 }

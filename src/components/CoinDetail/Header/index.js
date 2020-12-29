@@ -1,5 +1,6 @@
 import React from 'react';
 import BookmarkStar from '../../common/BookmarkStar';
+import SelectBox from '../../common/SelectBox';
 import './Header.css';
 
 function Header({ data, setCurrency }) {
@@ -10,7 +11,7 @@ function Header({ data, setCurrency }) {
   };
 
   return (
-    <header className="detail_header_container">
+    <div className="detail_header_container">
       <div className="detail_header_left">
         <BookmarkStar id={id} />
         <img
@@ -22,12 +23,16 @@ function Header({ data, setCurrency }) {
         <span>({data.symbol})</span>
       </div>
       <div>
-        <select onChange={handleChange} className="filter_box">
-          <option value="KRW">KRW 보기</option>
-          <option value="USD">USD 보기</option>
-        </select>
+        <SelectBox
+          onChange={handleChange}
+          className="filter_box"
+          optionList={[
+            { label: 'KRW 보기', value: 'KRW' },
+            { label: 'USD 보기', value: 'USD' },
+          ]}
+        />
       </div>
-    </header>
+    </div>
   );
 }
 
