@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Row from './Row';
 import Loading from '../../common/Loading';
 import './Table.css';
@@ -7,63 +7,13 @@ function Table(props) {
   const {
     coinList,
     filter = { currency: 'KRW', count: '50' },
-    loading,
+    loading = {},
     setCoinList,
-    viewFilter,
+    trigger,
+    setTrigger,
   } = props;
 
-  const [trigger, setTrigger] = useState(false);
-
   if (!coinList) return null;
-
-  const renderByViewFilter = () => {
-    if (viewFilter === 'all') {
-      return coinList.map((el) => (
-        <Row
-          setCoinList={setCoinList}
-          coinList={coinList}
-          filter={filter}
-          key={el.id}
-          data={el}
-        />
-      ));
-    }
-
-    if (viewFilter === 'bookmark') {
-      const bookmarkList = JSON.parse(localStorage.getItem('bookmark'));
-
-      if (bookmarkList.length) {
-        return coinList
-          .filter((el) => bookmarkList.includes(el.id))
-          .map((el) => (
-            <Row
-              trigger={trigger}
-              setTrigger={setTrigger}
-              coinList={coinList}
-              filter={filter}
-              key={el.id}
-              data={el}
-            />
-          ));
-      }
-
-      return (
-        <div className="table_no_data">
-          <p>데이터가 없습니다.</p>
-        </div>
-      );
-    }
-
-    return coinList.map((el) => (
-      <Row
-        setCoinList={setCoinList}
-        coinList={coinList}
-        filter={filter}
-        key={el.id}
-        data={el}
-      />
-    ));
-  };
 
   return (
     <div>
@@ -77,7 +27,23 @@ function Table(props) {
         <div className="table_volume">24H Volume</div>
       </div>
       <ul>
-        {renderByViewFilter()}
+        {coinList.length ? (
+          coinList.map((el) => (
+            <Row
+              setTrigger={setTrigger}
+              setCoinList={setCoinList}
+              trigger={trigger}
+              coinList={coinList}
+              filter={filter}
+              key={el.id}
+              data={el}
+            />
+          ))
+        ) : (
+          <div className="table_no_data">
+            <p>데이터가 없습니다.</p>
+          </div>
+        )}
         {loading.moreButton && <Loading />}
       </ul>
     </div>

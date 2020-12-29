@@ -1,8 +1,8 @@
 import React from 'react';
-import AssetsPriceList from '../components/list/AssetsPriceList';
+import AssetsPriceListContainer from '../containers/list/AssetsPriceListContainer';
 
 function AssetsPriceListPage() {
-  return <AssetsPriceList />;
+  return <AssetsPriceListContainer />;
 }
 
 export default AssetsPriceListPage;

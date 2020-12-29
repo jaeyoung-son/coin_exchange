@@ -1,8 +1,8 @@
 import React from 'react';
-import CoinDetail from '../components/CoinDetail';
+import CoinDetailContainer from '../containers/CoinDetail/CoinDetailContainer';
 
 function CoinDetailPage() {
-  return <CoinDetail />;
+  return <CoinDetailContainer />;
 }
 
 export default CoinDetailPage;

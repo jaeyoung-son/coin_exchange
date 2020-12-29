@@ -1,8 +1,8 @@
 import React from 'react';
-import BookmarkList from '../components/list/BookmarkList';
+import BookmarkListContainer from '../containers/list/BookmarkListContainer';
 
 function BookmarkListPage() {
-  return <BookmarkList />;
+  return <BookmarkListContainer />;
 }
 
 export default BookmarkListPage;

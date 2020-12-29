@@ -1,4 +1,5 @@
 import React from 'react';
+import SelectBox from '../../common/SelectBox';
 import './Filter.css';
 
 function Filter({ filter, setFilter, viewFilter, setViewFilter }) {
@@ -12,35 +13,38 @@ function Filter({ filter, setFilter, viewFilter, setViewFilter }) {
 
   return (
     <div className="filter_container">
-      <select
+      <SelectBox
         onChange={(e) => {
           setViewFilter(e.target.value);
         }}
         value={viewFilter}
         className="filter_box"
-      >
-        <option value="all">전체보기</option>
-        <option value="bookmark">북마크보기</option>
-      </select>
-      <select
+        optionList={[
+          { label: '전체보기', value: 'all' },
+          { label: '북마크보기', value: 'bookmark' },
+        ]}
+      />
+      <SelectBox
         onChange={handleChange}
         name="currency"
         value={filter.currency}
         className="filter_box"
-      >
-        <option value="KRW">KRW 보기</option>
-        <option value="USD">USD 보기</option>
-      </select>
-      <select
+        optionList={[
+          { label: 'KRW 보기', value: 'KRW' },
+          { label: 'USD 보기', value: 'USD' },
+        ]}
+      />
+      <SelectBox
         onChange={handleChange}
         name="count"
         value={filter.count}
         className="filter_box"
-      >
-        <option value="10">10개 보기</option>
-        <option value="30">30개 보기</option>
-        <option value="50">50개 보기</option>
-      </select>
+        optionList={[
+          { label: '10개 보기', value: '10' },
+          { label: '30개 보기', value: '30' },
+          { label: '50개 보기', value: '50' },
+        ]}
+      />
     </div>
   );
 }
